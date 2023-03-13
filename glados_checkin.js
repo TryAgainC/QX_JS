@@ -54,7 +54,7 @@ const $ = new Env("GLaDOS");
 const signcookie = "evil_gladoscookie";
 const signauthorization = "evil_galdosauthorization"
 
-var sicookie = $.getdata(signcookie);
+var sicookie = "__stripe_mid=6a1e7100-ffb3-4cdc-bc3e-b310a9b883a8588442; Cookie=enabled; Cookie.sig=lbtpENsrE0x6riM8PFTvoh9nepc; _gid=GA1.2.1625162287.1678684918; koa:sess=eyJ1c2VySWQiOjI5NDc2NSwiX2V4cGlyZSI6MTcwNDYwNDk2MDU3MywiX21heEFnZSI6MjU5MjAwMDAwM DB9; koa:sess.sig=ZMzJSM7z-mqrw_bs3NFXFqf6r2c; _ga=GA1.1.1901055235.1668352081; _ga_CZFVKMNT9J=GS1.1.1678684918.3.1.1678685456.0.0.0";
 var siauthorization = $.getdata(siauthorization)
 var account;
 var expday;
@@ -67,7 +67,6 @@ var message = "";
 
 !(async () => {
   if (typeof $request != "undefined") {
-    getCookie();
     return;
   }
   await signin();
@@ -157,21 +156,6 @@ function status() {
   });
 }
 
-function getCookie() {
-  if (
-    $request &&
-    $request.method != "OPTIONS" &&
-    $request.url.match(/checkin/)
-  ) {
-    const sicookie = "__stripe_mid=6a1e7100-ffb3-4cdc-bc3e-b310a9b883a8588442; Cookie=enabled; Cookie.sig=lbtpENsrE0x6riM8PFTvoh9nepc; _gid=GA1.2.1625162287.1678684918; koa:sess=eyJ1c2VySWQiOjI5NDc2NSwiX2V4cGlyZSI6MTcwNDYwNDk2MDU3MywiX21heEFnZSI6MjU5MjAwMDAwM DB9; koa:sess.sig=ZMzJSM7z-mqrw_bs3NFXFqf6r2c; _ga=GA1.1.1901055235.1668352081; _ga_CZFVKMNT9J=GS1.1.1678684918.3.1.1678685456.0.0.0";
-    $.log(sicookie);
-    $.setdata(sicookie, signcookie);
-    const siauthorization = $request.headers["Authorization"];
-    $.log(siauthorization);
-    $.setdata(siauthorization, signauthorization);
-    $.msg("GLaDOS", "", "获取签到Cookie成功🎉");
-  }
-}
 
 //From chavyleung's Env.js
 function Env(name, opts) {
