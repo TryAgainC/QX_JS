@@ -86,12 +86,11 @@ function signin() {
       Accept: `application/json, text/plain, */*`,
       Origin: `https://glados.rocks`,
       "Accept-Encoding": `gzip, deflate, br`,
-      Cookie: `__stripe_mid=6a1e7100-ffb3-4cdc-bc3e-b310a9b883a8588442; Cookie=enabled; Cookie.sig=lbtpENsrE0x6riM8PFTvoh9nepc; _gid=GA1.2.1625162287.1678684918; koa:sess=eyJ1c2VySWQiOjI5NDc2NSwiX2V4cGlyZSI6MTcwNDYwNDk2MDU3MywiX21heEFnZSI6MjU5MjAwMDAwMDB9; koa:sess.sig=ZMzJSM7z-mqrw_bs3NFXFqf6r2c; _gat_gtag_UA_104464600_2=1; _ga_CZFVKMNT9J=GS1.1.1678727897.4.1.1678727968.0.0.0; _ga=GA1.1.1901055235.1668352081`,
-      "Content-Type": `application/json;charset=utf-8`,
+      Cookie: sicookie,
       Host: `glados.rocks`,
       Connection: `keep-alive`,
       "User-Agent": `Mozilla/5.0 (iPhone; CPU iPhone OS 14_0_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1`,
-      'Authorization': `22411569344488265160294967890822-1440-2560`,
+      'Authorization': siauthorization,
       "Accept-Language": `zh-cn`,
     };
     const body = `{ "token": "glados.network" }`;
@@ -158,10 +157,11 @@ function status() {
 }
 
 function getCookie() {
-    const sicookie = "__stripe_mid=6a1e7100-ffb3-4cdc-bc3e-b310a9b883a8588442; Cookie=enabled; Cookie.sig=lbtpENsrE0x6riM8PFTvoh9nepc; _gid=GA1.2.1625162287.1678684918; koa:sess=eyJ1c2VySWQiOjI5NDc2NSwiX2V4cGlyZSI6MTcwNDYwNDk2MDU3MywiX21heEFnZSI6MjU5MjAwMDAwMDB9; koa:sess.sig=ZMzJSM7z-mqrw_bs3NFXFqf6r2c; _gat_gtag_UA_104464600_2=1; _ga_CZFVKMNT9J=GS1.1.1678727897.4.1.1678727968.0.0.0; _ga=GA1.1.1901055235.1668352081";
+    const sicookie = `__stripe_mid=6a1e7100-ffb3-4cdc-bc3e-b310a9b883a8588442; Cookie=enabled; Cookie.sig=lbtpENsrE0x6riM8PFTvoh9nepc; _gid=GA1.2.1625162287.1678684918; koa:sess=eyJ1c2VySWQiOjI5NDc2NSwiX2V4cGlyZSI6MTcwNDYwNDk2MDU3MywiX21heEFnZSI6MjU5MjAwMDAwMDB9; koa:sess.sig=ZMzJSM7z-mqrw_bs3NFXFqf6r2c; _gat_gtag_UA_104464600_2=1; _ga_CZFVKMNT9J=GS1.1.1678727897.4.1.1678727968.0.0.0; _ga=GA1.1.1901055235.1668352081`,
+      "Content-Type": `application/json;charset=utf-8`;
     $.log(sicookie);
     $.setdata(sicookie, signcookie);
-    const siauthorization = "22411569344488265160294967890822-1440-2560";
+    const siauthorization = `22411569344488265160294967890822-1440-2560`;
     $.log(siauthorization);
     $.setdata(siauthorization, signauthorization);
     $.msg("GLaDOS", "", "获取签到Cookie成功🎉");
