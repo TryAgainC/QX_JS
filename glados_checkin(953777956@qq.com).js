@@ -87,6 +87,7 @@ function signin() {
       Origin: `https://glados.rocks`,
       "Accept-Encoding": `gzip, deflate, br`,
       Cookie: `__stripe_mid=6a1e7100-ffb3-4cdc-bc3e-b310a9b883a8588442; Cookie=enabled; Cookie.sig=lbtpENsrE0x6riM8PFTvoh9nepc; _gid=GA1.2.1625162287.1678684918; _ga=GA1.1.1901055235.1668352081; koa:sess=eyJ1c2VySWQiOjk4Mzk0LCJfZXhwaXJlIjoxNzA0NzE1NTMxMDk3LCJfbWF4QWdlIjoyNTkyMDAwMDAwMH0=; koa:sess.sig=_vziTSzKvfRfpzqx5qZ3ORkn9AE; _ga_CZFVKMNT9J=GS1.1.1678794082.7.1.1678795554.0.0.0`,
+      "Content-Type": `application/json;charset=utf-8`,
       Host: `glados.rocks`,
       Connection: `keep-alive`,
       "User-Agent": `Mozilla/5.0 (iPhone; CPU iPhone OS 14_0_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1`,
