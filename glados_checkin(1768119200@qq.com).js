@@ -86,7 +86,7 @@ function signin() {
       Accept: `application/json, text/plain, */*`,
       Origin: `https://glados.rocks`,
       "Accept-Encoding": `gzip, deflate, br`,
-      Cookie: `__stripe_mid=6a1e7100-ffb3-4cdc-bc3e-b310a9b883a8588442; Cookie=enabled; Cookie.sig=lbtpENsrE0x6riM8PFTvoh9nepc; _gid=GA1.2.1625162287.1678684918; _ga=GA1.1.1901055235.1668352081; _ga_CZFVKMNT9J=GS1.1.1678772588.5.1.1678774569.0.0.0; koa:sess=eyJ1c2VySWQiOjk4Mzk0LCJfZXhwaXJlIjoxNzA0NzA2MjQxNjY0LCJfbWF4QWdlIjoyNTkyMDAwMDAwMH0=; koa:sess.sig=FTMK2_nTivvoB-6eewEbxJdiuE4`,
+      Cookie: `__stripe_mid=6a__stripe_mid=6a1e7100-ffb3-4cdc-bc3e-b310a9b883a8588442; Cookie=enabled; Cookie.sig=lbtpENsrE0x6riM8PFTvoh9nepc; _gid=GA1.2.1625162287.1678684918; _gat_gtag_UA_104464600_2=1; koa:sess=eyJ1c2VySWQiOjE3MTYzMywiX2V4cGlyZSI6MTcwNDcwOTk4MDIyNywiX21heEFnZSI6MjU5MjAwMDAwMDB9; koa:sess.sig=TaEH-UAcve-nGW8nyBEQssEELIc; _ga=GA1.1.1901055235.1668352081; _ga_CZFVKMNT9J=GS1.1.1678789718.6.1.1678789992.0.0.01e7100-ffb3-4cdc-bc3e-b310a9b883a8588442; Cookie=enabled; Cookie.sig=lbtpENsrE0x6riM8PFTvoh9nepc; _gid=GA1.2.1625162287.1678684918; _gat_gtag_UA_104464600_2=1; koa:sess=eyJ1c2VySWQiOjE3MTYzMywiX2V4cGlyZSI6MTcwNDcwOTk4MDIyNywiX21heEFnZSI6MjU5MjAwMDAwMDB9; koa:sess.sig=TaEH-UAcve-nGW8nyBEQssEELIc; _ga=GA1.1.1901055235.1668352081; _ga_CZFVKMNT9J=GS1.1.1678789718.6.1.1678789992.0.0.0`,
       "Content-Type": `application/json;charset=utf-8`,
       Host: `glados.rocks`,
       Connection: `keep-alive`,
